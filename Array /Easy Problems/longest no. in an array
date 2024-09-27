@@ -1,0 +1,13 @@
+class Solution {
+    public static int largest(int[] arr) {
+        // code here
+        int n= arr.length;
+        int big=arr[0];
+        for(int i=1;i<n;i++){
+            if(big<=arr[i]){
+                big=arr[i];
+            }
+        }
+        return big;
+    }
+}
