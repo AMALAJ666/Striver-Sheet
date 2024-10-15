@@ -1,0 +1,21 @@
+class Solution {
+    // Function to find pair with maximum sum
+    public int pairWithMaxSum(List<Integer> nums) {
+        // Your code goes here
+       
+        int n = nums.size();
+         int [] arr= new int[n];
+        int j=0;
+        for(int i: nums){
+            arr[j]=i;
+            j++;
+        }
+        int maxsum=arr[0]+arr[1];
+        int sum=0;
+        for(int i=1;i<n;i++){
+            sum=arr[i-1]+arr[i];
+            maxsum=Math.max(maxsum,sum);
+        }
+        return maxsum;
+    }
+}
