@@ -1,0 +1,19 @@
+class Solution {
+    public int maxSubArray(int[] arr) {
+        int maxsum=arr[0];
+        int sum=0;
+        int n= arr.length;
+        if(n==1){
+            return maxsum;
+        }
+        for(int i=0;i<n;i++){
+            sum=sum+arr[i];
+            maxsum=maxsum>sum ? maxsum : sum;
+            if(sum<0){
+                sum=0;
+            }
+            
+        }
+        return maxsum;
+    }
+}
